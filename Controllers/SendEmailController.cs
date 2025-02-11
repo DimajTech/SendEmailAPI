@@ -16,6 +16,7 @@ namespace SendEmailAPI.Controllers
         }
 
         [HttpPost]
+        [Route("[action]")]
         public IActionResult SendEmail(Email request)
         {
             _emailService.SendEmail(request);
